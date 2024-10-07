@@ -6,9 +6,13 @@
     <title>Weather App</title>
   </head>
   <body>
-    <h1>Temperature at {{ city }}</h1>
+    {% if city == 'your Location' %}
+      <h1>Temperature at {{ city }}</h1>
+    {% else %}
+      <h1>Temperature at {{ city }}, {{ country }}</h1>
+    {% endif %}
     <h2>{{ temp }} &#8457</h2>
     <br>
-    <a href='/meteo/discover'>Check temperature for different City</a> | <a href='/meteo'>Home</a>
+    <a href='/meteo'>Home</a> | <a href='/meteo/discover'>Check for different City</a>
   </body>
 </html>
