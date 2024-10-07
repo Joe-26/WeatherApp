@@ -35,3 +35,6 @@ def temp_other(request):
     template = loader.get_template('index.html')
     context = {'city':city.city, 'country':city.country, 'temp': get_temp(location)}
     return HttpResponse(template.render(context, request))
+
+def add_city(request):
+    return render(request, 'addCity.html')
